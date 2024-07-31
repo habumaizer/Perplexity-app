@@ -28,7 +28,7 @@ This project is a simplified version of Perplexity AI, designed to retrieve and 
 - MongoDB
 
 > [!CAUTION]
-> Application takes 1-2 Mintues to be accessible on the browser because of downloading
+> Application takes 1-2 Minutes to be accessible on the browser because of downloading
 
 ### Running the Application with Docker
 
