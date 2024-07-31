@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+requests
+pymongo
+transformers
+better_profanity
+python-dotenv
+torch

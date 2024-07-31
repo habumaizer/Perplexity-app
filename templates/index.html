@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Application</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Query Application</h1>
+        <form method="post" class="query-form" action="/api/v1/">
+            <label for="user_query">Enter your query:</label>
+            <input type="text" id="user_query" name="user_query" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if response %}
+        <div class="response-box animate-fade-in">
+            <h2>Response:</h2>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
+
+        {% if recommendations %}
+        <div class="recommendations-box animate-fade-in">
+            <h2>Follow-up Recommendations:</h2>
+            <form method="post" class="recommendations-form" action="/api/v1/">
+                {% for rec in recommendations %}
+                <button type="submit" name="user_query" value="{{ rec }}">{{ rec }}</button>
+                {% endfor %}
+            </form>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

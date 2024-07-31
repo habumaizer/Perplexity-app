@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+
+  query-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: PreplexityApp
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    networks:
+      - query-network
+
+  mongo:
+   image: mongo
+   restart: always
+   environment:
+     MONGO_INITDB_ROOT_USERNAME: root
+     MONGO_INITDB_ROOT_PASSWORD: root123
+   ports:
+      - 27017:27017
+   networks:
+      - query-network
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root123
+      ME_CONFIG_MONGODB_URL: mongodb://root:root123@mongo:27017/
+    networks:
+      - query-network
+
+networks:
+  query-network:
+    driver: bridge
