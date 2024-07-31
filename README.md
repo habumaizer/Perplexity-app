@@ -30,12 +30,26 @@ This project is a simplified version of Perplexity AI, designed to retrieve and 
 > [!CAUTION]
 > Response takes 1-2 Mintues to be accessible on the browser because of downloading
 
+### Running the Application with Docker
+
+1. **Clone the repository**:
+
+   ```sh
+   git clone https://github.com/habumaizer/perplexity-Query-App.git
+   cd perplexity-Query-App
+
+2. **Start**:
+
+   ```sh
+   docker-compose up --build
+
 ### Environment Variables
 
 Create a `.env` file in the root directory of your project and add your environment variables:
 
 PERPLEXITY_API_KEY=your-api-key
 MONGODB_URI=mongodb://USERNAME:PASSWORD@localhost:27017/
+
 
 ### Running the Application Locally
 
@@ -61,16 +75,3 @@ MONGODB_URI=mongodb://USERNAME:PASSWORD@localhost:27017/
    ```sh
    uvicorn main:app --reload
    Open your browser and go to http://127.0.0.1:8000/
-
-### Running the Application with Docker
-
-1. **Clone the repository**:
-
-   ```sh
-   git clone https://github.com/habumaizer/perplexity-Query-App.git
-   cd perplexity-Query-App
-
-2. **Start**:
-
-   ```sh
-   docker-compose up --build
