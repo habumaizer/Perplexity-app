@@ -30,6 +30,13 @@ This project is a simplified version of Perplexity AI, designed to retrieve and 
 > [!CAUTION]
 > Application takes 1-2 Minutes to be accessible on the browser because of downloading
 
+### Environment Variables
+
+Create a `.env` file in the root directory of your project and add your environment variables:
+
+PERPLEXITY_API_KEY=your-api-key
+MONGODB_URI=mongodb://USERNAME:PASSWORD@localhost:27017/
+
 ### Running the Application with Docker
 
 1. **Clone the repository**:
@@ -42,14 +49,6 @@ This project is a simplified version of Perplexity AI, designed to retrieve and 
 
    ```sh
    docker-compose up --build
-
-### Environment Variables
-
-Create a `.env` file in the root directory of your project and add your environment variables:
-
-PERPLEXITY_API_KEY=your-api-key
-MONGODB_URI=mongodb://USERNAME:PASSWORD@localhost:27017/
-
 
 ### Running the Application Locally
 
