@@ -1,4 +1,4 @@
-# Query Application
+# Prompt Application
 
 This project is a simplified version of Perplexity AI, designed to retrieve and process information based on user queries and provide follow-up recommendations. The application uses FastAPI for backend services, MongoDB for data storage, and Transformer models for natural language processing.
 
