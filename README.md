@@ -34,8 +34,8 @@ This project is a simplified version of Perplexity AI, designed to retrieve and 
 
 Create a `.env` file in the root directory of your project and add your environment variables:
 
-PERPLEXITY_API_KEY=your-api-key
-MONGODB_URI=mongodb://USERNAME:PASSWORD@localhost:27017/
+   PERPLEXITY_API_KEY=your-api-key<br />
+   MONGODB_URI=mongodb://USERNAME:PASSWORD@localhost:27017/
 
 ### Running the Application with Docker
 
